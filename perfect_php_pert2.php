@@ -117,7 +117,7 @@ else {
 */
 
 //配列の初期化
-
+/*
 //$fruits = 1;
 //echo $fruits;
 
@@ -131,6 +131,26 @@ $vegetable = array(
 );
 
 echo $vegetable[2], PHP_EOL; //tomato が返る。引数なしはFatal errorに。
+*/
+
+//===3.3.3 連想配列
+
+$fruits_color = array(
+    'apple' => 'red',
+    'banana' => 'yellow',
+    'peach',
+    1, //キーが0
+);
+
+echo $fruits_color['apple'], PHP_EOL; //red
+echo $fruits_color[0], PHP_EOL; //何も返らない 
+echo $fruits_color[2], PHP_EOL; //peach
+echo $fruits_color[3], PHP_EOL; //何も返らない 
+
+var_dump($array); //NULL
+
+
+
 
 ?>
 
