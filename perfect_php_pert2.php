@@ -107,13 +107,30 @@ echo $a, PHP_EOL; //11
 */
 
 //===論理演算子
+/*
 if (isset($argv[1]) && $argv[1]) {
     echo '与えられた引数は真です', PHP_EOL;
 }
 else {
     echo '引数が与えられていないか、与えられた引数が真ではありません', PHP_EOL;
 }
+*/
 
+//配列の初期化
+
+//$fruits = 1;
+//echo $fruits;
+
+//$fruits[] = 'apple'; //空のブラケットを用いた配列の初期化。
+//echo $fruits; //1が返る
+
+$vegetable = array(
+    'onion',
+    'cabetsu',
+    'tomato',
+);
+
+echo $vegetable[2], PHP_EOL; //tomato が返る。引数なしはFatal errorに。
 
 ?>
 
