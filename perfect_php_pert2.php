@@ -77,11 +77,24 @@ class NowDocTest
 
 //===文字列とキャスト
 
+/*
 echo 15.0, PHP_EOL; //これは15で出力される
 
 printf('%.1f', 15.0); //printf()関数で15.0で出力可能
+*/
 
+//文字列の連結を行うドット演算子
+$age = 23;
+$yuki = 'Yuki is ' . $age . ' years old';
+
+echo $yuki, PHP_EOL;
+
+$tom = 'Tom is ' . 15 . 'yrs old';
+$bob = 'Bob is ' . 16. 'yrs old'; //これは不動小数点扱いされてエラーに。
+
+echo $tom, PHP_EOL, $bob;
 ?>
+
 
 
 
