@@ -84,6 +84,7 @@ printf('%.1f', 15.0); //printf()関数で15.0で出力可能
 */
 
 //文字列の連結を行うドット演算子
+/*
 $age = 23;
 $yuki = 'Yuki is ' . $age . ' years old';
 
@@ -93,6 +94,15 @@ $tom = 'Tom is ' . 15 . 'yrs old';
 $bob = 'Bob is ' . 16. 'yrs old'; //これは不動小数点扱いされてエラーに。
 
 echo $tom, PHP_EOL, $bob;
+*/
+
+//===加算子・減算子 後ろにつけるか先につけるかで、返される値が違うよ！
+$a = 10;
+
+echo --$a, PHP_EOL; //9
+echo ++$a, PHP_EOL; //10
+echo $a++, PHP_EOL; //10
+echo $a, PHP_EOL; //11
 ?>
 
 
