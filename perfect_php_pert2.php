@@ -134,7 +134,7 @@ echo $vegetable[2], PHP_EOL; //tomato が返る。引数なしはFatal errorに�
 */
 
 //===3.3.3 連想配列
-
+/*
 $fruits_color = array(
     'apple' => 'red',
     'banana' => 'yellow',
@@ -148,8 +148,33 @@ echo $fruits_color[2], PHP_EOL; //peach
 echo $fruits_color[3], PHP_EOL; //何も返らない 
 
 var_dump($array); //NULL
+*/
 
+//===3.3.4 多次元配列
+$fruits = array(
+    'apple' => array(
+        'price' => 100,
+        'count' => 5,
+    ),
+    'banana' => array(
+        'price' => 80,
+        'count' => 2,        
+    ),
+    'orange' => array(
+        'price' => 120,
+        'count' => 9,        
+    ),
 
+);
+
+foreach ($fruits as $name => $value) {
+    echo "$name は1つ {$value['price']}円で、{$value['count']}個です", PHP_EOL;
+}
+
+//出力結果↓
+//apple は1つ 100円で、5個です
+//banana は1つ 80円で、2個です
+//orange は1つ 120円で、9個です
 
 
 ?>
