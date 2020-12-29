@@ -116,6 +116,7 @@ foreach ($dice as $value) {
 
 
 //=== 4.1.9 continue
+//現在の繰り返し処理を途中で終了し、次の繰り返し処理をする場合に使う。
 echo PHP_EOL, 'これはcontinueの出力結果の確認です', PHP_EOL;
 $dice_for_continue = range(1,6);
 shuffle($dice_for_continue);
@@ -125,6 +126,46 @@ foreach ($dice_for_continue as $value) {
     }
     echo $value, PHP_EOL;
 }
+/*これはcontinueの出力結果の確認です
+2
+6
+4*/
 
+//===4.1.10 switch
+//複雑な条件分岐に便利
+
+echo "これはswitch文を使わない場合です", PHP_EOL;
+$hour = date('H'); //現時刻を取得
+if ($hour === '6') {
+    echo "朝の6時です、おはようございます", PHP_EOL;
+} elseif ($hour === '12') {
+    echo "正午です、こんにちは", PHP_EOL;
+} elseif ($hour === '15') {
+    echo "3時のおやつの時間だよ", PHP_EOL;
+} else {
+    echo "どうも", PHP_EOL;
+}
+
+echo "これはswitch文で書き換えた場合です", PHP_EOL;
+switch ($hour) {
+    case '6':
+        echo "朝の6時です、おはようございます", PHP_EOL;
+        break;
+    case '12':
+        echo "正午です、こんにちは", PHP_EOL;
+        break;
+    case '15':
+        echo "3時のおやつの時間だよ", PHP_EOL;
+        break;
+    default:
+        echo "どうも", PHP_EOL;
+        break;
+}
+
+echo PHP_EOL;
+
+//個人的に調べた日付取得方法
+echo date('Y/m/d'); //=>  2020/12/29
 ?>
+
 
